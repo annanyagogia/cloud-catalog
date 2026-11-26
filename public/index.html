@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+  <title>Enterprise Cloud Service Catalog</title>
+  <style>
+    :root { color-scheme: dark; --ink: #f4f7fb; --muted: #a7b3c5; --line: #24334a; --mint: #79f0c2; --blue: #76b7ff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; color: var(--ink); font: 16px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; background: radial-gradient(ellipse at 72% 12%, #16395a 0, transparent 34%), radial-gradient(ellipse at 12% 88%, #183d3d 0, transparent 30%), #08111f; }
+    main { width: min(1080px, calc(100% - 40px)); margin: 0 auto; padding: 34px 0 48px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 8px 0 52px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .02em; }
+    .brand-mark { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid #45647d; border-radius: 12px; color: var(--mint); background: #11263a; }
+    .badge { padding: 7px 12px; border: 1px solid #2e4c56; border-radius: 999px; color: var(--mint); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+    .hero { max-width: 760px; padding: 36px 0 46px; }
+    .eyebrow { color: var(--mint); font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    h1 { margin: 15px 0 18px; font-size: clamp(42px, 7vw, 76px); line-height: 1.02; letter-spacing: -.055em; }
+    .intro { max-width: 630px; color: var(--muted); font-size: 18px; }
+    .identity { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 0; }
+    .identity span { padding: 10px 15px; border: 1px solid var(--line); border-radius: 10px; background: #101e2d; }
+    .identity strong { color: var(--blue); }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin: 14px 0 18px; }
+    h2 { margin: 0; font-size: 22px; letter-spacing: -.02em; }
+    .section-heading p { margin: 0; color: var(--muted); font-size: 14px; }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card { padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: linear-gradient(145deg, #132337, #0d1928); }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+    .card-icon { color: var(--mint); font-size: 22px; }
+    .tag { padding: 4px 9px; border-radius: 999px; color: #b7d8ff; background: #1b3450; font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 18px; border: 1px solid #41647d; border-radius: 10px; color: var(--ink); text-decoration: none; font-weight: 650; background: #132b3e; transition: transform .15s ease, border-color .15s ease, background .15s ease; }
+    .button:hover { transform: translateY(-2px); border-color: var(--mint); background: #18364a; }
+    .button.primary { color: #07161a; border-color: var(--mint); background: var(--mint); }
+    .button.primary:hover { background: #a1f7d8; }
+    .arrow { font-size: 18px; }
+    footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 50px; padding-top: 18px; border-top: 1px solid var(--line); color: #7f90a6; font-size: 12px; }
+    @media (max-width: 640px) { main { width: min(100% - 28px, 1080px); padding-top: 20px; } header { padding-bottom: 22px; } .badge { font-size: 10px; } .hero { padding-top: 30px; } .intro { font-size: 16px; } .cards { grid-template-columns: 1fr; } .section-heading { align-items: start; flex-direction: column; } footer { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">◇</span><span>Cloud Catalog</span></div>
+      <span class="badge">Systems operational</span>
+    </header>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow">Infrastructure, made discoverable</div>
+      <h1 id="page-title">Enterprise Cloud<br>Service Catalog</h1>
+      <p class="intro">Explore a curated catalog of cloud building blocks, from flexible compute to managed platforms and object storage.</p>
+      <div class="identity" aria-label="Student details">
+        <span><strong>Name:</strong> Annanya Gogia</span>
+        <span><strong>Roll Number:</strong> 2648013</span>
+      </div>
+      <div class="actions">
+        <a class="button primary" href="/api/services">Explore services <span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="button" href="/api/status">View system status <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section aria-labelledby="highlights-title">
+      <div class="section-heading">
+        <h2 id="highlights-title">Built for modern workloads</h2>
+        <p>One catalog. Multiple ways to scale.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="card-top"><span class="card-icon" aria-hidden="true">⌘</span><span class="tag">IAAS</span></div><h3>Elastic compute</h3><p>Choose virtual machines that adapt to your team's capacity needs.</p></article>
+        <article class="card"><div class="card-top"><span class="card-icon" aria-hidden="true">λ</span><span class="tag">PAAS</span></div><h3>Managed runtimes</h3><p>Ship application code without managing the underlying servers.</p></article>
+        <article class="card"><div class="card-top"><span class="card-icon" aria-hidden="true">▤</span><span class="tag">STORAGE</span></div><h3>Durable object storage</h3><p>Keep application data available with usage-based storage options.</p></article>
+        <article class="card"><div class="card-top"><span class="card-icon" aria-hidden="true">⌁</span><span class="tag">CLOUD NATIVE</span></div><h3>Container delivery</h3><p>Deploy containerized services with a managed execution platform.</p></article>
+      </div>
+    </section>
+    <footer><span>Enterprise Cloud Service Catalog</span><span>Express · Node.js · Vercel ready</span></footer>
+  </main>
+</body>
+</html>
